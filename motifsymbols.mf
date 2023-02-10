@@ -1,0 +1,198 @@
+u#:=2/3pt#;
+define_pixels(u);
+ps =3;
+sds = 20;
+
+beginchar(66,12u#,12u#,5u#);"Fourmotif I";
+z1=(2u,0);
+z2=(2u,8u);
+z3=(10u,8u);
+z4=(10u,0);
+pickup pencircle scaled ps;
+draw z1..z2;
+draw z2..z3;
+draw z2..z4;
+labels(range 1 thru 4);
+endchar;
+
+beginchar(67,12u#,12u#,5u#);"Fourmotif II";
+z1=(2u,0);
+z2=(2u,8u);
+z3=(10u,8u);
+z4=(10u,0);
+pickup pencircle scaled ps;
+draw z1..z2;
+draw z2..z3;
+draw z3..z4;
+labels(range 1 thru 4);
+endchar;
+
+beginchar(68,12u#,12u#,5u#);"Fourmotif III";
+z1=(2u,0);
+z2=(2u,8u);
+z3=(10u,8u);
+z4=(10u,0);
+pickup pencircle scaled ps;
+draw z1..z2;
+draw z1..z4;
+draw z2..z3;
+draw z2..z4;
+labels(range 1 thru 4);
+endchar;
+
+beginchar(69,12u#,12u#,5u#);"Fourmotif IV";
+z1=(2u,0);
+z2=(2u,8u);
+z3=(10u,8u);
+z4=(10u,0);
+pickup pencircle scaled ps;
+draw z1..z2;
+draw z1..z4;
+draw z2..z3;
+draw z3..z4;
+labels(range 1 thru 4);
+endchar;
+
+beginchar(70,12u#,12u#,5u#);"Fourmotif V";
+z1=(2u,0);
+z2=(2u,8u);
+z3=(10u,8u);
+z4=(10u,0);
+pickup pencircle scaled ps;
+draw z1..z2;
+draw z1..z4;
+draw z2..z3;
+draw z2..z4;
+draw z3..z4;
+labels(range 1 thru 4);
+endchar;
+
+beginchar(71,12u#,12u#,5u#);"Fourmotif VI";
+z1=(2u,0);
+z2=(2u,8u);
+z3=(10u,8u);
+z4=(10u,0);
+pickup pencircle scaled ps;
+draw z1..z2;
+draw z1..z3;
+draw z1..z4;
+draw z2..z3;
+draw z2..z4;
+draw z3..z4;
+labels(range 1 thru 4);
+endchar;
+
+beginchar(72,12u#,12u#,5u#);"Motif Pair";
+z1=(2u,4u);
+z2=(10u,4u);
+pickup pencircle scaled ps;
+draw z1..z2;
+labels(range 1 thru 2);
+endchar;
+
+beginchar(73,12u#,12u#,5u#);"Motif Triangle";
+z1=(2u,0);
+z2=(10u,0);
+z3=(6u,8u);
+pickup pencircle scaled ps;
+draw z1..z2;
+draw z1..z3;
+draw z2..z3;
+labels(range 1 thru 3);
+endchar;
+
+beginchar(74,12u#,12u#,5u#);"Motif Triple";
+z1=(2u,0);
+z2=(10u,0);
+z3=(6u,8u);
+pickup pencircle scaled ps;
+draw z1..z3;
+draw z2..z3;
+labels(range 1 thru 3);
+endchar;
+
+beginchar(75,12u#,12u#,5u#);"Motif Node";
+z1=(6u,4u);
+labels(range 1 thru 1);
+fill fullcircle scaled sds shifted z1;
+endchar;
+
+nstraightdots := 5;
+ndiagdots := 7;
+
+beginchar(76,12u#,12u#,5u#);"Dotted Motif Pair";
+z1=(2u,4u);
+z2=(10u,4u);
+pickup pencircle scaled ps;
+for i := 0 upto (nstraightdots-1):
+	drawdot (i/(nstraightdots-1))[z1,z2];
+endfor
+labels(range 1 thru 2);
+endchar;
+
+beginchar(77,12u#,12u#,5u#);"Triangle identity";
+z1=(2u,0);
+z2=(10u,0);
+z3=(6u,8u);
+pickup pencircle scaled ps;
+draw z1..z3;
+draw z2..z3;
+for i := 0 upto (nstraightdots-1):
+	drawdot (i/(nstraightdots-1))[z1,z2];
+endfor
+labels(range 1 thru 3);
+endchar;
+
+beginchar(78,12u#,12u#,5u#);"Square identity";
+z1=(2u,0);
+z2=(2u,8u);
+z3=(10u,8u);
+z4=(10u,0);
+pickup pencircle scaled ps;
+draw z1..z2;
+draw z2..z3;
+draw z3..z4;
+for i := 0 upto (nstraightdots-1):
+	drawdot (i/(nstraightdots-1))[z1,z4];
+endfor
+labels(range 1 thru 4);
+endchar;
+
+beginchar(79,12u#,12u#,5u#);"Line+1 Identity";
+z1=(2u,0);
+z2=(2u,8u);
+z3=(10u,8u);
+z4=(10u,0);
+pickup pencircle scaled ps;
+draw z1..z2;
+draw z2..z3;
+draw z2..z4;
+for i := 0 upto (nstraightdots-1):
+	drawdot (i/(nstraightdots-1))[z3,z4];
+endfor
+for i := 0 upto (nstraightdots-1):
+	drawdot (i/(nstraightdots-1))[z1,z4];
+endfor
+labels(range 1 thru 4);
+endchar;
+
+beginchar(80,12u#,12u#,5u#);"Triangle+1 Identity";
+z1=(2u,0);
+z2=(2u,8u);
+z3=(10u,8u);
+z4=(10u,0);
+pickup pencircle scaled ps;
+draw z1..z2;
+draw z1..z4;
+draw z2..z3;
+draw z2..z4;
+for i := 0 upto (nstraightdots-1):
+	drawdot (i/(nstraightdots-1))[z3,z4];
+endfor
+for i := 0 upto (ndiagdots-1):
+	drawdot (i/(ndiagdots-1))[z1,z3];
+endfor
+labels(range 1 thru 4);
+endchar;
+
+end

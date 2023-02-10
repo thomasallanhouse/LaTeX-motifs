@@ -1,0 +1,61 @@
+\documentclass[12pt,a4paper]{article}
+
+\newfont{\mtfont}{motifsymbols}
+
+\newcommand{\mtI}{\mbox{\mtfont B}}
+\newcommand{\mtII}{\mbox{\mtfont C}}
+\newcommand{\mtIII}{\mbox{\mtfont D}}
+\newcommand{\mtIV}{\mbox{\mtfont E}}
+\newcommand{\mtV}{\mbox{\mtfont F}}
+\newcommand{\mtVI}{\mbox{\mtfont G}}
+\newcommand{\mtPair}{\mbox{\mtfont H}}
+\newcommand{\mtTriangle}{\mbox{\mtfont I}}
+\newcommand{\mtTriple}{\mbox{\mtfont J}}
+\newcommand{\mtNode}{\mbox{\mtfont K}}
+\newcommand{\mtDotPair}{\mbox{\mtfont L}}
+\newcommand{\mtDotTriple}{\mbox{\mtfont M}}
+\newcommand{\mtDotII}{\mbox{\mtfont N}}
+\newcommand{\mtIdI}{\mbox{\mtfont O}}
+\newcommand{\mtIdII}{\mbox{\mtfont P}}
+
+\newcommand{\num}[1]{\left[ #1 \right]}
+
+\title{\sc Motif symbols}
+\author{Thomas House}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+
+
+\begin{center}
+\begin{tabular}{l|c}
+\LaTeX{} command & Output \\
+ \hline
+\verb!\mtNode! & $\mtNode$\\
+\verb!\mtPair! & $\mtPair$\\
+\verb!\mtTriple! & $\mtTriple$\\
+\verb!\mtTriangle! & $\mtTriangle$\\
+\verb!\mtI! & $\mtI$\\
+\verb!\mtII! & $\mtII$\\
+\verb!\mtIII! & $\mtIII$\\
+\verb!\mtIV! & $\mtIV$\\
+\verb!\mtV! & $\mtV$\\
+\verb!\mtVI! & $\mtVI$\\
+\verb!\mtDotPair! & $\mtDotPair$\\
+\verb!\mtDotTriple! & $\mtDotTriple$\\
+\verb!\mtDotII! & $\mtDotII$\\
+\verb!\mtIdI! & $\mtIdI$\\
+\verb!\mtIdII! & $\mtIdII$\\
+\end{tabular}
+\end{center}
+
+An example of how these might be used is:
+
+\begin{equation}
+\num{\mtDotTriple} = \num{\mtTriple} + \num{\mtTriangle}  = N\langle k (k-1) \rangle \; . 
+\end{equation}
+
+\end{document}
